@@ -24,8 +24,8 @@ artifacts {
 // Bintray
 
 bintray {
-    user = System.getenv('BINTRAY_USER')
-    key = System.getenv('BINTRAY_KEY')
+    user = System.getenv('CEDEXIS_BINTRAY_USER')
+    key = System.getenv('CEDEXIS_BINTRAY_KEY')
 
     configurations = ['archives']
     pkg {
@@ -41,7 +41,7 @@ bintray {
             desc = libraryDescription
             gpg {
                 sign = true //Determines whether to GPG sign the files. The default is false
-                passphrase = System.getenv('BINTRAY_GPG_PASSPHRASE')
+                passphrase = System.getenv('CEDEXIS_BINTRAY_GPG_PASSPHRASE')
                 //Optional. The passphrase for GPG signing'
             }
         }
